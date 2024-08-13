@@ -1,0 +1,58 @@
+name: Deploy website to GitHub Pages
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  push:
+    branches: ["main"]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+# Provide permission to clone the repo and deploy it to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build website
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+          fetch-depth: 0  # 풀 히스토리를 가져옴
+
+    - name: Install Node.js dependencies
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - run: npm install  # 또는 yarn install, 프로젝트에 따라 다름
+
+    - name: Build the project
+      run: npm run build  # 또는 프로젝트에 맞는 빌드 명령어 입력
+
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v3
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: ./dist  # 빌드된 파일의 경로를 지정
+
+  # Deploy website to GitHub Pages hosting
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
