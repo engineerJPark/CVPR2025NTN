@@ -142,21 +142,15 @@
           <h2 class="title is-3 has-text-centered">Key Contributions</h2>
           <ul style="list-style-type: none; padding-left: 0; max-width: 800px; margin: 0 auto;">
             <li>
-              ⏩ Identifying the main factors causing performance degradation in adverse weather through a data-centric analysis:
-              <b>geometric perturbation</b> and <b>point drop</b>.
+              ⏩ Existing LiDAR segmentation models experience significant performance degradation in adverse weather conditions, particularly for dynamic "things" classes (e.g., pedestrians, vehicles), which poses a critical challenge for autonomous driving safety.
             </li>
             <div style="height: 15px;"></div>
             <li>
-              ⏩ Introducing two novel data augmentations tailored to each identified distortion type:
-              <b>Selective Jittering (SJ)</b> to mimic geometric perturbation and
-              <b>Learnable Point Drop (LPD)</b> using a Deep Q-Learning Network to simulate point drop scenarios.
+              ⏩ To address this issue, the proposed NTN (segmeNt Things for No-accident) method introduces Feature Binding and Beam-wise Feature Distillation to mitigate semantic and local feature corruption caused by adverse weather.
             </li>
             <div style="height: 15px;"></div>
             <li>
-              ⏩ Setting new state-of-the-art benchmarks on the SemanticKITTI to SemanticSTF benchmark,
-              achieving a remarkable <b>39.5 mIoU</b>,
-              surpassing the previous state-of-the-art by over <b>5.4%p mIoU</b> without relying on
-              precise simulations of adverse weather in LiDAR point inputs.
+              ⏩ The proposed approach outperforms state-of-the-art models, achieving up to +7.9 mIoU improvements across various benchmarks, with substantial performance gains for safety-critical classes such as pedestrians and vehicles.
             </li>
           </ul>
         </div>
