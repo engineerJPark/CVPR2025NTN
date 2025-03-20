@@ -25,7 +25,7 @@
 
 
   <title>No Thing, Nothing: Highlighting Safety-Critical Classes for Robust LiDAR Semantic Segmentation in Adverse Weather</title>
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -120,6 +120,48 @@
   </div>
 </section>
 
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h2 class="title is-3">Qualitative Results</h2> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/rain.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/snow.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/lightfog.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/densefog.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -141,23 +183,11 @@
         <div class="hero-body">
           <h2 class="title is-3 has-text-centered">Key Contributions</h2>
           <ul style="list-style-type: none; padding-left: 0; max-width: 800px; margin: 0 auto;">
-            <li>
-              ⏩ Identifying the main factors causing performance degradation in adverse weather through a data-centric analysis:
-              <b>geometric perturbation</b> and <b>point drop</b>.
-            </li>
+            <li>⏩ Identifying the main factors causing performance degradation in adverse weather through a data-centric analysis: <b>geometric perturbation</b> and <b>point drop</b>.</li>
             <div style="height: 15px;"></div>
-            <li>
-              ⏩ Introducing two novel data augmentations tailored to each identified distortion type:
-              <b>Selective Jittering (SJ)</b> to mimic geometric perturbation and
-              <b>Learnable Point Drop (LPD)</b> using a Deep Q-Learning Network to simulate point drop scenarios.
-            </li>
+            <li>⏩ Introducing two novel data augmentations tailored to each identified distortion type: <b>Selective Jittering (SJ)</b> to mimic geometric perturbation and <b>Learnable Point Drop (LPD)</b> using a Deep Q-Learning Network to simulate point drop scenarios.</li>
             <div style="height: 15px;"></div>
-            <li>
-              ⏩ Setting new state-of-the-art benchmarks on the SemanticKITTI to SemanticSTF benchmark,
-              achieving a remarkable <b>39.5 mIoU</b>,
-              surpassing the previous state-of-the-art by over <b>5.4%p mIoU</b> without relying on
-              precise simulations of adverse weather in LiDAR point inputs.
-            </li>
+            <li>⏩ Setting new state-of-the-art benchmarks on the SemanticKITTI to SemanticSTF benchmark, achieving a remarkable 39.5 mIoU, surpassing the previous state-of-the-art by over 5.4%p mIoU without relying on precise simulations of adverse weather in LiDAR point inputs.</li>
           </ul>
         </div>
       </div>
@@ -175,7 +205,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="hero-body">
         <h2 class="title is-3">Overall Methods</h2>
-        <img src="static/images/Methods.png" alt="Overall Methods" style="width: 75%; height: auto;"/>
+        <img src="static/images/methods.png" alt="Overall Methods" style="width: 75%; height: auto;"/>
       </div>
     </div>
   </div>
@@ -190,7 +220,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="hero-body">
         <h2 class="title is-3">Qualitative Results</h2>
-        <img src="static/images/Quali.png" alt="Qualitative Results" style="width: 75%; height: auto;"/>
+        <img src="static/images/results.png" alt="Qualitative Results" style="width: 75%; height: auto;"/>
       </div>
     </div>
   </div>
@@ -198,7 +228,19 @@
 <!-- End Qualitative Results -->
 
 
-
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{park2024rethinking,
+          title={Rethinking Data Augmentation for Robust LiDAR Semantic Segmentation in Adverse Weather},
+          author={Park, Junsung and Kim, Kyungmin and Shim, Hyunjung},
+          journal={arXiv preprint arXiv:2407.02286},
+          year={2024}
+        }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
 
 
   <footer class="footer">
